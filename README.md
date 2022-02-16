@@ -62,6 +62,38 @@ This repo will be made public before the start of the contest. (C4 delete this l
 # Hubble Exchange
 Perpetual futures exchange on Avalanche.
 
+## Contract Overview
+Here is the list of main contracts in the protocol.
+
+| Contract Path                       | Lines of Code |
+| ----------------------------------- | ------------- |
+| `contracts/ClearingHouse.sol`       |  355          |
+| `contracts/MarginAccount.sol`       |  621          |
+| `contracts/AMM.sol`                 |  739          |
+| `contracts/InsuranceFund.sol`       |  120          |
+| `contracts/Oracle.sol`              |  173          |
+| `contracts/Registry.sol`            |  25           |
+| `contracts/VUSD.sol`                |  76           |
+| `contracts/curve-v2/Swap.vy`        |  1170         |
+| `contracts/curve-v2/CurveMath.vy`   |  265          |
+| `contracts/curve-v2/Views.vy`       |  126          |
+
+## System Overview
+There are 4 major entities in the system at a high level
+
+* `ClearingHouse`: This contract is used for opening/closing positions, adding/removing liquidity, liquidation for all AMMs
+* `MarginAccount`: Used for accounting purposes, keeps track of the margin of all users, liquidating margin account, settling bad debt.
+* `AMM`: This is a virtual AMM that consists of two components. One component is the `Swap.vy` which is inspired from curve-v2 [triCrypto2](https://curve.fi/tricrypto2) pool but modified for two coins and the other is `AMM.sol` which consists of functionalities required for perp exchange.
+* `InsuranceFund`: Used to settle bad debts
+
+There are two types of user personas in the system
+* Takers: takes long/short position on leverage
+* Makers: add/remove liquidity in the pool on leverage
+
+A user can be both a taker as well a maker. For more information about makers, refer to [this](https://medium.com/hubbleexchange/makers-in-hubble-vamm-c2dbae445ed9) blog.
+
+
+## Dev setup guideline
 ### One-Time vyper setup
 Vyper compilation with hardhat takes a ton of time and is performed on every run (no caching). Therefore, we place .vy files outside the contracts directory and manually compile and dump the abi and bytecode in files that are then picked up in the tests.
 
