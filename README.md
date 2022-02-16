@@ -31,18 +31,6 @@ Under "SPONSORS ADD INFO HERE" heading below, include the following:
 
 ---
 
-# ⭐️ Sponsor: Provide marketing details
-
-- [ ] Your logo (URL or add file to this repo - SVG or other vector format preferred)
-- [ ] Your primary Twitter handle
-- [ ] Any other Twitter handles we can/should tag in (e.g. organizers' personal accounts, etc.)
-- [ ] Your Discord URI
-- [ ] Your website
-- [ ] Optional: Do you have any quirks, recurring themes, iconic tweets, community "secret handshake" stuff we could work in? How do your people recognize each other, for example?
-- [ ] Optional: your logo in Discord emoji format
-
----
-
 # Contest prep
 
 ## ⭐️ Sponsor: Contest prep
