@@ -1,4 +1,6 @@
-# Hubble contest details
+# Hubble Exchange contest details
+[Hubble](https://twitter.com/HubbleExchange) is a vAMM based perpetual futures exchange on Avalanche.
+
 - $71,250 USDC main award pot
 - $3,750 USDC gas optimization award pot
 - Join [C4 Discord](https://discord.gg/code4rena) to register
@@ -6,9 +8,6 @@
 - [Read our guidelines for more details](https://docs.code4rena.com/roles/wardens)
 - Starts February 17, 2022 00:00 UTC
 - Ends February 23, 2022 23:59 UTC
-
-## Hubble Exchange
-Perpetual futures exchange on Avalanche.
 
 ## Contract Overview
 Here is the list of main contracts in the protocol.
@@ -42,8 +41,9 @@ A user can be both a taker as well a maker. For more information about makers, r
 
 
 ## Dev setup guideline
+
 ### One-Time vyper setup
-Vyper compilation with hardhat takes a ton of time and is performed on every run (no caching). Therefore, we place .vy files outside the contracts directory and manually compile and dump the abi and bytecode in files that are then picked up in the tests.
+Vyper compilation with hardhat takes a ton of time and is performed on every run (no caching). Therefore, we manually compile the .vy files and dump the abi and bytecode in files that are then picked up in the tests.
 
 ```
 python3 -m venv venv
@@ -54,5 +54,20 @@ npm run vyper-compile
 
 ### Compile
 ```
-npm run vyper-compile && npm run compile
+npm run vyper-compile
+npm run compile
 ```
+
+### Local Deployment
+```
+# starts node on `http://127.0.0.1:8545/` with 10K ETH in 20 accounts generated from mnemonic: "test test test test test test test test test test test junk"
+
+npx hardhat node
+npx hardhat run scripts/deploy.js --network local
+```
+
+### Documentation
+```
+npx hardhat docgen
+```
+Open `./docgen/index.html` in a browser.

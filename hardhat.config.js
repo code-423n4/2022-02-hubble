@@ -9,10 +9,10 @@ require('hardhat-docgen')
 module.exports = {
     solidity: "0.8.9",
     networks: {
-        hardhat: {
-            allowUnlimitedContractSize: true,
+        local: {
+            url: 'http://localhost:8545',
             chainId: 1337
-        },
+        }
     },
     spdxLicenseIdentifier: {
         runOnCompile: true
