@@ -1,0 +1,104 @@
+==============================================================
+Guild: Code4rena
+Channel: ARCHIVE-Q1-2022 / ☑hubble-feb17
+==============================================================
+
+[02/16/2022 5:22 PM] liveactionllamac4 (pinned)
+👋 Hello and welcome to the contest channel for the $75K USDC Hubble contest!
+
+📆 Contest opens February 17, 2022, at 0:00 UTC (in about 6.5 hours!) and runs through February 23, 2022 at 23:59 UTC (7 days).
+
+Please give a warm welcome to the Hubble team, particularly @candycarpet and @asquare08, who will be available for questions either here in the channel or via DM. 
+
+We'll be posting relevant links, documentation, etc. here, so if you intend to participate in this contest, consider enabling notifications for this channel. 🐺 ⏰
+
+{Reactions}
+👋 🎉 (2) 🥳 (3) 
+
+[02/16/2022 5:37 PM] itsmetechjay
+Pinned a message.
+
+
+[02/17/2022 5:46 AM] candycarpet
+Hey folks 👋  Super excited to be here. Happy to answer any questions.
+
+Some details:
+Hubble Exchange is a vAMM based decentralized perpetual futures exchange. It's a multi-collateral and cross-margining system - the trading experience is similar to FTX. The closest project similar to ours is Perpetual Protocol V2 (Curie).
+
+Relavent Links:
+
+Litepaper - https://docs.google.com/document/d/1v8V56_M30dyEbnCaUkEH18_S7YeApkNZin1NM8suPsQ/edit#heading=h.mfzjyt6lqj8m
+
+Makers:
+https://medium.com/hubbleexchange/makers-in-hubble-vamm-c2dbae445ed9
+https://www.notion.so/Hubble-vAMM-CurveCrypto-Invariant-a37aa328c0104106a3047e85d8f08dd5
+
+{Embed}
+https://medium.com/hubbleexchange/makers-in-hubble-vamm-c2dbae445ed9
+Makers in Hubble vAMM
+Background and thoughts about vAMMs
+Code4rena - ARCHIVE-Q1-2022 - ☑hubble-feb17 [943556821354938508].txt_Files/1%2AURpl5C8Cehubf4pNuQO9Bg-48005.png
+
+{Embed}
+https://www.notion.so/Hubble-vAMM-CurveCrypto-Invariant-a37aa328c0104106a3047e85d8f08dd5
+Hubble vAMM: CurveCrypto Invariant
+Automatic market-makers (AMMs) are one of the major innovations which decentralized finance has brought. They use the maths function to price assets when exchanging two or more tokens. First, Uniswap brought markets created by $x·y = k$ invariant which doesn’t make any assumption about the pricing of underlying assets and spreads liquidity acros...
+Code4rena - ARCHIVE-Q1-2022 - ☑hubble-feb17 [943556821354938508].txt_Files/https%253A%252F%252Fs3-us-west-2.amazonaws-737DB.png
+
+{Embed}
+https://docs.google.com/document/d/1v8V56_M30dyEbnCaUkEH18_S7YeApkNZin1NM8suPsQ/edit
+Hubble Exchange
+Hubble ExchangeLitepaperWebsite, Discord, Twitter, Author Glossary Margin Account Funding Payment Virtual USD (vUSD) 1. Secondary Markets 2. Disincentivize negative vUSD balances Liquidations Insurance Fund (IF) Virtual Automated Market Maker (vAMM) Architecture Product Road Map Glossary Mark...
+Code4rena - ARCHIVE-Q1-2022 - ☑hubble-feb17 [943556821354938508].txt_Files/-iWNluZa5Q9Wm8MXstqLQGjboPcpK3LV1vtLW5CTAD-FFEFC
+
+{Reactions}
+👋 (6) 
+
+[02/18/2022 6:11 PM] candycarpet
+Some wardens asked about the contracts deployment methodology. So we have added the deployment script and instructions - https://github.com/code-423n4/2022-02-hubble#local-deployment
+
+{Embed}
+https://github.com/code-423n4/2022-02-hubble
+GitHub - code-423n4/2022-02-hubble
+Contribute to code-423n4/2022-02-hubble development by creating an account on GitHub.
+Code4rena - ARCHIVE-Q1-2022 - ☑hubble-feb17 [943556821354938508].txt_Files/499106c5-f8ea-4abf-a523-df45adfb8b4b-536E8
+
+{Reactions}
+thankyou (2) 
+
+[02/19/2022 6:58 PM] danb#6193
+https://github.com/code-423n4/2022-02-hubble/blob/main/contracts/AMM.sol#L350
+what's market price and index price?
+
+{Embed}
+https://github.com/code-423n4/2022-02-hubble/blob/main/contracts/AMM.sol
+2022-02-hubble/AMM.sol at main · code-423n4/2022-02-hubble
+Contribute to code-423n4/2022-02-hubble development by creating an account on GitHub.
+Code4rena - ARCHIVE-Q1-2022 - ☑hubble-feb17 [943556821354938508].txt_Files/499106c5-f8ea-4abf-a523-df45adfb8b4b-536E8
+
+
+[02/20/2022 1:33 AM] kirk_baird
+market twap price comes from the snapshots i.e. that is a twap of recent trades. index twap price comes from a trusted oracle and should represent the actual price of the asset. 
+The premium is a fee users pay (or receive) if there is a difference between the market price and index price in an attempt to equate them.
+This is a decent explainer https://help.dydx.exchange/en/articles/4797443-perpetual-funding-rate#:~:text=The%20minimum%20funding%20rate%20is,maximum%20funding%20rate%20is%200.75%25.
+
+{Embed}
+https://help.dydx.exchange/en/articles/4797443-perpetual-funding-rate
+Perpetual Funding Rate
+Detailed explanation of funding rate
+Code4rena - ARCHIVE-Q1-2022 - ☑hubble-feb17 [943556821354938508].txt_Files/ebcd036a0db50db993ae98ce380f6419-38699.png
+
+{Reactions}
+chefskiss (2) 
+
+[02/24/2022 12:02 AM] C4
+**🚨 CONTEST ALERT**
+
+@🐺wardens The **Hubble** contest is now closed! Huge thanks to everyone who participated🔍, whether you submitted a finding or not.
+
+What's next: Hubble's team will review the findings over the next couple of days, and then we'll pass them off to the judge. Keep an eye on #📢announcements for regular updates on how the contest is progressing through awarding 🤑🏆, judging 🧑‍⚖️ and reporting 📜. Feel free to ping an organizer if you have questions along the way!
+
+
+==============================================================
+Exported 7 message(s)
+==============================================================
